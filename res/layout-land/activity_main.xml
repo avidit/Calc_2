@@ -19,40 +19,11 @@
         android:textSize="40sp" />
 
     <Button
-        android:id="@+id/btnNine"
-        style="@style/NumberButtonStyle"
-        android:layout_alignTop="@+id/btnEight"
-        android:layout_toRightOf="@+id/btnEight"
-        android:text="@string/title_btn9" />
-
-    <Button
-        android:id="@+id/btnSix"
-        style="@style/NumberButtonStyle"
-        android:layout_alignLeft="@+id/btnNine"
-        android:layout_alignTop="@+id/btnFive"
-        android:text="@string/title_btn6" />
-
-    <Button
-        android:id="@+id/btnSeven"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnFour"
-        android:layout_alignParentLeft="true"
-        android:padding="20dp"
-        android:text="@string/title_btn7" />
-
-    <Button
         android:id="@+id/btnEight"
         style="@style/NumberButtonStyle"
         android:layout_above="@+id/btnFive"
         android:layout_toRightOf="@+id/btnFour"
         android:text="@string/title_btn8" />
-
-    <Button
-        android:id="@+id/btnFour"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnOne"
-        android:layout_alignParentLeft="true"
-        android:text="@string/title_btn4" />
 
     <Button
         android:id="@+id/btnFive"
@@ -70,54 +41,11 @@
         android:text="@string/title_btnMemminus" />
 
     <Button
-        android:id="@+id/btnSquare"
-        style="@style/spOperatorButtonStyle"
-        android:layout_above="@+id/btnEight"
-        android:layout_toRightOf="@+id/btnNegate"
-        android:text="@string/title_btnSquare" />
-
-    <Button
-        android:id="@+id/btnSqrt"
-        style="@style/spOperatorButtonStyle"
-        android:layout_above="@+id/btnNine"
-        android:layout_toRightOf="@+id/btnEight"
-        android:text="@string/title_btnSqrt" />
-
-    <Button
-        android:id="@+id/btnPower"
-        style="@style/spOperatorButtonStyle"
-        android:layout_above="@+id/btnMultiply"
-        android:layout_toRightOf="@+id/btnSqrt"
-        android:text="@string/title_btnPwr" />
-
-    <Button
-        android:id="@+id/btnOne"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnZero"
-        android:layout_alignParentLeft="true"
-        android:text="@string/title_btn1" />
-
-    <Button
         android:id="@+id/btnDecimal"
         style="@style/NumberButtonStyle"
-        android:layout_below="@+id/btnMinus"
-        android:layout_toLeftOf="@+id/btnPlus"
+        android:layout_below="@+id/btnTwo"
+        android:layout_toLeftOf="@+id/btnZero"
         android:text="@string/title_btnDecimal" />
-
-    <Button
-        android:id="@+id/btnClear"
-        style="@style/NumberButtonStyle"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="@string/title_btnClear" />
-
-    <Button
-        android:id="@+id/btnNegate"
-        style="@style/spOperatorButtonStyle"
-        android:layout_above="@+id/btnSeven"
-        android:layout_alignParentLeft="true"
-        android:text="@string/title_btnNegate"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnInv"
@@ -125,65 +53,6 @@
         android:layout_above="@+id/memMinus"
         android:layout_alignRight="@+id/memMinus"
         android:text="@string/title_btnInv" />
-
-    <Button
-        android:id="@+id/btnMinus"
-        style="@style/NumberButtonStyle"
-        android:layout_alignBaseline="@+id/btnEqual"
-        android:layout_alignBottom="@+id/btnEqual"
-        android:layout_toLeftOf="@+id/btnEqual"
-        android:text="@string/title_btnSub" />
-
-    <Button
-        android:id="@+id/memClear"
-        style="@style/MemoryButtonStyle"
-        android:layout_above="@+id/btnEqual"
-        android:layout_alignParentRight="true"
-        android:text="@string/title_btnMemclear" />
-
-    <Button
-        android:id="@+id/memRead"
-        style="@style/MemoryButtonStyle"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_btnMemread" />
-
-    <Button
-        android:id="@+id/btnEqual"
-        style="@style/NumberButtonStyle"
-        android:layout_alignBaseline="@+id/btnClear"
-        android:layout_alignBottom="@+id/btnClear"
-        android:layout_alignRight="@+id/memClear"
-        android:text="@string/title_btnEquals" />
-
-    <Button
-        android:id="@+id/btnZero"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnSquare"
-        android:layout_alignLeft="@+id/btnSquare"
-        android:text="@string/title_btn0" />
-
-    <Button
-        android:id="@+id/btnTwo"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnMinus"
-        android:layout_toLeftOf="@+id/btnThree"
-        android:text="@string/title_btn2" />
-
-    <Button
-        android:id="@+id/btnPlus"
-        style="@style/NumberButtonStyle"
-        android:layout_above="@+id/btnMinus"
-        android:layout_toLeftOf="@+id/btnEqual"
-        android:text="@string/title_btnAdd" />
-
-    <Button
-        android:id="@+id/btnThree"
-        style="@style/NumberButtonStyle"
-        android:layout_alignBaseline="@+id/memClear"
-        android:layout_alignBottom="@+id/memClear"
-        android:layout_toLeftOf="@+id/btnPlus"
-        android:text="@string/title_btn3" />
 
     <Button
         android:id="@+id/btnDivide"
@@ -200,10 +69,141 @@
         android:text="@string/title_btnProd" />
 
     <Button
+        android:id="@+id/btnEqual"
+        style="@style/NumberButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/title_btnEquals" />
+
+    <Button
+        android:id="@+id/btnSix"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnTwo"
+        android:layout_toLeftOf="@+id/btnDivide"
+        android:text="@string/title_btn6" />
+
+    <Button
+        android:id="@+id/memClear"
+        style="@style/MemoryButtonStyle"
+        android:layout_above="@+id/btnEqual"
+        android:layout_alignParentRight="true"
+        android:text="@string/title_btnMemclear" />
+
+    <Button
+        android:id="@+id/memRead"
+        style="@style/MemoryButtonStyle"
+        android:layout_above="@+id/memClear"
+        android:layout_alignParentRight="true"
+        android:text="@string/title_btnMemread" />
+
+    <Button
         android:id="@+id/memAdd"
         style="@style/MemoryButtonStyle"
-        android:layout_alignLeft="@+id/memRead"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/txtResult"
         android:text="@string/title_btnMemread" />
+
+    <Button
+        android:id="@+id/btnNine"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnDivide"
+        android:layout_toLeftOf="@+id/btnDivide"
+        android:text="@string/title_btn9" />
+
+    <Button
+        android:id="@+id/btnPower"
+        style="@style/spOperatorButtonStyle"
+        android:layout_above="@+id/btnMultiply"
+        android:layout_toLeftOf="@+id/btnMultiply"
+        android:text="@string/title_btnPwr" />
+
+    <Button
+        android:id="@+id/btnSqrt"
+        style="@style/spOperatorButtonStyle"
+        android:layout_above="@+id/btnNine"
+        android:layout_toLeftOf="@+id/btnPower"
+        android:text="@string/title_btnSqrt" />
+
+    <Button
+        android:id="@+id/btnSquare"
+        style="@style/spOperatorButtonStyle"
+        android:layout_alignBaseline="@+id/btnSqrt"
+        android:layout_alignBottom="@+id/btnSqrt"
+        android:layout_toLeftOf="@+id/btnSqrt"
+        android:text="@string/title_btnSquare" />
+
+    <Button
+        android:id="@+id/btnZero"
+        style="@style/NumberButtonStyle"
+        android:layout_below="@+id/btnTwo"
+        android:layout_toRightOf="@+id/btnTwo"
+        android:text="@string/title_btn0" />
+
+    <Button
+        android:id="@+id/btnFour"
+        style="@style/NumberButtonStyle"
+        android:layout_alignBaseline="@+id/btnFive"
+        android:layout_alignBottom="@+id/btnFive"
+        android:layout_toLeftOf="@+id/btnFive"
+        android:text="@string/title_btn4" />
+
+    <Button
+        android:id="@+id/btnNegate"
+        style="@style/spOperatorButtonStyle"
+        android:layout_above="@+id/btnEight"
+        android:layout_toLeftOf="@+id/btnSquare"
+        android:text="@string/title_btnNegate"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSeven"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnFour"
+        android:layout_alignLeft="@+id/btnFour"
+        android:text="@string/title_btn7" />
+
+    <Button
+        android:id="@+id/btnOne"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnClear"
+        android:layout_alignLeft="@+id/btnFour"
+        android:text="@string/title_btn1" />
+
+    <Button
+        android:id="@+id/btnClear"
+        style="@style/NumberButtonStyle"
+        android:layout_alignBaseline="@+id/btnZero"
+        android:layout_alignBottom="@+id/btnZero"
+        android:layout_alignLeft="@+id/btnOne"
+        android:text="@string/title_btnClear" />
+
+    <Button
+        android:id="@+id/btnTwo"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnMinus"
+        android:layout_toRightOf="@+id/btnOne"
+        android:text="@string/title_btn2" />
+
+    <Button
+        android:id="@+id/btnThree"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnZero"
+        android:layout_toRightOf="@+id/btnTwo"
+        android:text="@string/title_btn3" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        style="@style/NumberButtonStyle"
+        android:layout_above="@+id/btnMinus"
+        android:layout_toRightOf="@+id/btnZero"
+        android:text="@string/title_btnAdd" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        style="@style/NumberButtonStyle"
+        android:layout_alignBaseline="@+id/btnEqual"
+        android:layout_alignBottom="@+id/btnEqual"
+        android:layout_toLeftOf="@+id/memClear"
+        android:text="@string/title_btnSub" />
 
 </RelativeLayout>
