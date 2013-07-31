@@ -154,6 +154,7 @@ public class MainActivity extends Activity {
 
 			if (userIsInMiddleOfTypingANumber) {
 				if (operationEntered.equals("=")) {
+					userIsInMiddleOfTypingANumber = false;
 					performMath();
 					return;
 				}
@@ -250,9 +251,9 @@ public class MainActivity extends Activity {
 
 				if (value1IsDone) {
 					valuesArray.add(String.valueOf(currentCharacter));
-				} else {
-					valuesArray.add(String.valueOf(currentCharacter));
-				}
+				} //else {
+				//valuesArray.add(String.valueOf(currentCharacter));
+				//}
 				operationdone = true;
 			}
 		}
@@ -261,24 +262,24 @@ public class MainActivity extends Activity {
 			doAddition(valuesArray);
 		}
 		if (operand == '-') {
-			// doSubstraction(valuesArray);
+			doSubstraction(valuesArray);
 		}
 		if (operand == '*') {
-			// doMultiplication(valuesArray);
+			doMultiplication(valuesArray);
 		}
 		if (operand == '/') {
-			// doDivision(valuesArray);
+			doDivision(valuesArray);
 		}
 	}
 
 	void doAddition(ArrayList<String> valuesArray) {
 		int runningTotal = 0;
 
-		for (int i = 0; i < valuesArray.size(); i += 1) {// todo
-			int number2 = 0;
+		for (int i = 0; i < valuesArray.size(); i += 1) {
 			int number1 = Integer.parseInt(valuesArray.get(i));
+			int number2 = 0;
 
-			number2 = Integer.parseInt(valuesArray.get(i));
+			number2 = Integer.parseInt(valuesArray.get(i+1));
 
 			int tot = number1 + number2;
 			runningTotal += tot;
@@ -286,28 +287,49 @@ public class MainActivity extends Activity {
 		screen.setText(String.valueOf(runningTotal));
 	}
 
-	void doSubstraction(String value1, String value2) {
-		int number1 = Integer.parseInt(value1);
-		int number2 = Integer.parseInt(value2);
+	void doSubstraction(ArrayList<String> valuesArray) {
+		int runningTotal = 0;
 
-		int tot = number1 - number2;
-		screen.setText(String.valueOf(tot));
+		for (int i = 0; i < valuesArray.size(); i += 1) {
+			int number2 = 0;
+			int number1 = Integer.parseInt(valuesArray.get(i));
+
+			number2 = Integer.parseInt(valuesArray.get(i));
+
+			int tot = number1 - number2;
+			runningTotal += tot;
+		}
+		screen.setText(String.valueOf(runningTotal));
 	}
 
-	void doMultiplication(String value1, String value2) {
-		int number1 = Integer.parseInt(value1);
-		int number2 = Integer.parseInt(value2);
+	void doMultiplication(ArrayList<String> valuesArray) {
+		int runningTotal = 0;
 
-		int tot = number1 * number2;
-		screen.setText(String.valueOf(tot));
+		for (int i = 0; i < valuesArray.size(); i += 1) {
+			int number2 = 0;
+			int number1 = Integer.parseInt(valuesArray.get(i));
+
+			number2 = Integer.parseInt(valuesArray.get(i));
+
+			int tot = number1 * number2;
+			runningTotal += tot;
+		}
+		screen.setText(String.valueOf(runningTotal));
 	}
 
-	void doDivision(String value1, String value2) {
-		int number1 = Integer.parseInt(value1);
-		int number2 = Integer.parseInt(value2);
+	void doDivision(ArrayList<String> valuesArray) {
+		int runningTotal = 0;
 
-		int tot = number1 / number2;
-		screen.setText(String.valueOf(tot));
+		for (int i = 0; i < valuesArray.size(); i += 1) {
+			int number2 = 0;
+			int number1 = Integer.parseInt(valuesArray.get(i));
+
+			number2 = Integer.parseInt(valuesArray.get(i+1));
+
+			int tot = number1 / number2;
+			runningTotal += tot;
+		}
+		screen.setText(String.valueOf(runningTotal));
 	}
 
 	int getNumberForSpButtons() {
