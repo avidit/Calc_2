@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
 
 	String operationEntered = null;
 
-	// private OnClickListener spListener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -225,37 +224,35 @@ public class MainActivity extends Activity {
 	}
 
 	void performMath() {
-		String textEnteredSoFar = screen.getText().toString();
-		int length = textEnteredSoFar.length();
+		String enteredCharacter = screen.getText().toString();
+		String currentValue = "";
+		int length = enteredCharacter.length();
 		ArrayList<String> valuesArray = new ArrayList<String>();
 		char operand = ' ';
 		boolean value1IsDone = false;
 
 		for (int i = 0; i < length; i++) {
-			char currentCharacter = textEnteredSoFar.charAt(i);
-			if (currentCharacter == '+') {
+			char currentCharacter = enteredCharacter.charAt(i);
+			if (currentCharacter == '+' || currentCharacter == '-' || currentCharacter == 'X' || currentCharacter == '/')
+			{
 				operand = currentCharacter;
 				value1IsDone = true;
-			} else if (currentCharacter == '-') {
-				value1IsDone = true;
-				operand = currentCharacter;
+				valuesArray.add(currentValue);
+				currentValue = ""; //reset
+			}else{
+				currentValue += enteredCharacter;
+			} 
+			//else if (currentCharacter == '-') {
+			//value1IsDone = true;
+			//operand = currentCharacter;
 
-			} else if (currentCharacter == '*') {
-				value1IsDone = true;
-				operand = currentCharacter;
-
-			} else if (currentCharacter == '/') {
-				value1IsDone = true;
-				operand = currentCharacter;
-			} else {
-
-				if (value1IsDone) {
-					valuesArray.add(String.valueOf(currentCharacter));
-				} //else {
+			//if (value1IsDone) {
 				//valuesArray.add(String.valueOf(currentCharacter));
-				//}
-				operationdone = true;
-			}
+			//} 
+			//else {
+				//valuesArray.add(String.valueOf(currentCharacter));
+			//}
+
 		}
 
 		if (operand == '+') {
@@ -276,43 +273,31 @@ public class MainActivity extends Activity {
 		int runningTotal = 0;
 
 		for (int i = 0; i < valuesArray.size(); i += 1) {
-			int number1 = Integer.parseInt(valuesArray.get(i));
-			int number2 = 0;
-
-			number2 = Integer.parseInt(valuesArray.get(i+1));
-
-			int tot = number1 + number2;
-			runningTotal += tot;
+			int number = Integer.parseInt(valuesArray.get(i));
+			runningTotal += number;
 		}
 		screen.setText(String.valueOf(runningTotal));
+		operationdone = true;
 	}
 
 	void doSubstraction(ArrayList<String> valuesArray) {
 		int runningTotal = 0;
 
 		for (int i = 0; i < valuesArray.size(); i += 1) {
-			int number2 = 0;
-			int number1 = Integer.parseInt(valuesArray.get(i));
-
-			number2 = Integer.parseInt(valuesArray.get(i));
-
-			int tot = number1 - number2;
-			runningTotal += tot;
+			int number = Integer.parseInt(valuesArray.get(i));
+			//number -= runningTotal;
 		}
 		screen.setText(String.valueOf(runningTotal));
+		operationdone = true;
 	}
 
 	void doMultiplication(ArrayList<String> valuesArray) {
 		int runningTotal = 0;
 
 		for (int i = 0; i < valuesArray.size(); i += 1) {
-			int number2 = 0;
-			int number1 = Integer.parseInt(valuesArray.get(i));
-
-			number2 = Integer.parseInt(valuesArray.get(i));
-
-			int tot = number1 * number2;
-			runningTotal += tot;
+			int number = Integer.parseInt(valuesArray.get(i));
+			runningTotal *= number;
+			operationdone = true;
 		}
 		screen.setText(String.valueOf(runningTotal));
 	}
@@ -321,23 +306,19 @@ public class MainActivity extends Activity {
 		int runningTotal = 0;
 
 		for (int i = 0; i < valuesArray.size(); i += 1) {
-			int number2 = 0;
-			int number1 = Integer.parseInt(valuesArray.get(i));
-
-			number2 = Integer.parseInt(valuesArray.get(i+1));
-
-			int tot = number1 / number2;
-			runningTotal += tot;
+			int number = Integer.parseInt(valuesArray.get(i));
+			runningTotal /= number;
 		}
 		screen.setText(String.valueOf(runningTotal));
+		operationdone = true;
 	}
 
 	int getNumberForSpButtons() {
-		String textEnteredSoFar = screen.getText().toString();
+		String enteredCharacter = screen.getText().toString();
 		int num = 0;
-		int length = textEnteredSoFar.length();
+		int length = enteredCharacter.length();
 		for (int i = 0; i < length; i++) {
-			char currentCharacter = textEnteredSoFar.charAt(i);
+			char currentCharacter = enteredCharacter.charAt(i);
 			if (currentCharacter != '+' && currentCharacter != '-'
 					&& currentCharacter != '/' && currentCharacter != '*') 
 			{
